@@ -37,7 +37,10 @@ function validate(){
          errorpwd.innerText="valid";
          errorpwd.style.color="green";
          pwdsignin.style.border="2px solid green";
+         emailsignin.style.border="2px solid green";
+         alert("valid");
         return true;
+        
     }
     // else{
     //     emailsignin.style.border="2px solid red";
@@ -64,6 +67,7 @@ function validate(){
          error.style.color="red";
          errorpwd.innerText="Invalid";
          errorpwd.style.color="red";
+         alert("invalid");
          return false;
     
 
@@ -83,11 +87,11 @@ function passswordstrength(){
         return true;
     }
     else if(regpwdlength.test(pwdsignin.value) || regpwdupper.test(pwdsignin.value) || regpwdlower.test(pwdsignin.value) || regpwdnum.test(pwdsignin.value)){
-        pwdstr.style.backgroundColor="orange";
+        pwdstr.style.backgroundColor="red";
         return false;
     }
     else{
-        pwdstr.style.backgroundColor="red";
+        pwdstr.style.backgroundColor="orange";
         return false;
     }
 }
